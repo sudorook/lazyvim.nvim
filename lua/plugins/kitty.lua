@@ -1,0 +1,5 @@
+return {
+  {
+    "sudorook/kitty.vim",
+  },
+}
