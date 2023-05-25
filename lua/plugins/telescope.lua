@@ -20,6 +20,22 @@ return {
         layout_config = { prompt_position = "top" },
         sorting_strategy = "ascending",
         winblend = 0,
+        -- mappings = {
+        --   i = {
+        --     ["<PgUp>"] = function(...)
+        --       return require("telescope.actions").results_scrolling_up(...)
+        --     end,
+        --     ["<PgDown>"] = function(...)
+        --       return require("telescope.actions").results_scrolling_down(...)
+        --     end,
+        --     ["<Home>"] = function(...)
+        --       return require("telescope.actions").move_to_top(...)
+        --     end,
+        --     ["<End>"] = function(...)
+        --       return require("telescope.actions").move_to_bottom(...)
+        --     end,
+        --   },
+        -- },
       },
     },
     dependencies = {
