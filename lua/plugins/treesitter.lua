@@ -10,7 +10,14 @@ return {
       indent = {
         enable = true,
       },
-      ensure_installed = {},
+      ensure_installed = {
+        "dap_repl",
+      },
     },
+    config = function(_, opts)
+      require("nvim-dap-repl-highlights").setup()
+      require("nvim-treesitter.configs").setup(opts)
+    end,
+    dependencies = { "LiadOz/nvim-dap-repl-highlights" },
   },
 }
