@@ -18,7 +18,14 @@ return {
         cssls = { mason = false },
         html = { mason = false },
         jsonls = { mason = false },
-        lua_ls = { mason = false },
+        lua_ls = {
+          mason = false,
+          settings = {
+            Lua = {
+              diagnostics = { globals = { "vim" } },
+            },
+          },
+        },
         pyright = { mason = false },
         r_language_server = { mason = false },
         rust_analyzer = { mason = false },
