@@ -45,7 +45,7 @@ return {
           nls.builtins.hover.printenv,
           nls.builtins.diagnostics.shellcheck,
           nls.builtins.formatting.shfmt.with({
-            extra_args = { "-i", "2", "-ci", "-sr" },
+            extra_args = { "-i", "2", "-ci", "-kp", "-sr" },
           }),
           -- nls.builtins.formatting.stylua,
           nls.builtins.formatting.stylua.with({
