@@ -35,7 +35,12 @@ return {
           nls.builtins.diagnostics.cppcheck,
           nls.builtins.diagnostics.flake8,
           nls.builtins.formatting.prettier.with({
-            extra_args = { "--prose-wrap", "always" },
+            extra_args = {
+              "--prose-wrap",
+              "always",
+              "--config-precedence",
+              "file-override",
+            },
           }),
           nls.builtins.hover.printenv,
           nls.builtins.diagnostics.shellcheck,
