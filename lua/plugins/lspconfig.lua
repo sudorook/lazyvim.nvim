@@ -30,6 +30,7 @@ return {
         r_language_server = { mason = false },
         rust_analyzer = { mason = false },
         tsserver = { mason = false },
+        texlab = { mason = false },
       },
     },
   },
