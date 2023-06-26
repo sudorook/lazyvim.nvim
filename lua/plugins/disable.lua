@@ -1,6 +1,6 @@
 return {
   { "rcarriga/nvim-notify", enabled = false },
-  { "nvim-neo-tree/neo-tree", enabled = false },
+  { "nvim-neo-tree/neo-tree.nvim", enabled = false },
   { "catppuccin/nvim", enabled = false },
   { "folke/noice.nvim", enabled = false },
   { "echasnovski/mini.comment", enabled = false },
