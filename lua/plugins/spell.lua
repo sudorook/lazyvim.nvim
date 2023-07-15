@@ -1,0 +1,5 @@
+return {
+  {
+    "sudorook/wordlist.vim",
+  },
+}
