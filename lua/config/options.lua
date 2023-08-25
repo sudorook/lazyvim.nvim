@@ -5,7 +5,6 @@
 vim.g.mapleader = "\\"
 vim.g.maplocalleader = "\\"
 vim.opt.mouse = ""
-vim.opt.clipboard = "" -- "unnamedplus"
 vim.lsp.buf.format({ timeout_ms = 30000 })
 vim.opt.conceallevel = 0
 vim.opt.confirm = false
