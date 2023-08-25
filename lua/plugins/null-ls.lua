@@ -59,6 +59,9 @@ return {
             },
           }),
           nls.builtins.formatting.styler,
+          nls.builtins.formatting.latexindent.with({
+            extra_args = { "-g", "/dev/null" },
+          }),
           nls.builtins.formatting.trim_whitespace,
           nls.builtins.formatting.trim_newlines,
         },
