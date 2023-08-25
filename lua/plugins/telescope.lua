@@ -47,6 +47,7 @@ return {
           require("telescope").load_extension("fzf")
         end,
       },
+      { "nvim-telescope/telescope-file-browser.nvim" },
     },
   },
   {
