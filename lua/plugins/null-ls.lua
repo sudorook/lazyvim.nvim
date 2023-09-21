@@ -40,6 +40,8 @@ return {
               "always",
               "--config-precedence",
               "file-override",
+              "--ignore-path",
+              ".prettierignore",
             },
           }),
           nls.builtins.hover.printenv,
