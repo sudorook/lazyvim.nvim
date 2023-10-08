@@ -82,7 +82,6 @@ return {
   },
   {
     "sudorook/nvim-dap-python",
-    dir = "~/Projects/neovim/nvim-dap-python",
     branch = "tweak",
     config = function()
       require("dap-python").setup("python")
