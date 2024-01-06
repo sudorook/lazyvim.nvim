@@ -7,11 +7,6 @@ return {
         update_on_insert = true,
       },
       format = { timeout_ms = 10000 },
-      setup = {
-        clangd = function(_, opts)
-          opts.capabilities.offsetEncoding = { "utf-16" }
-        end,
-      },
       servers = {
         -- aiken = { mason = false },
         -- als = { mason = false },
