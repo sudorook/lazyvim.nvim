@@ -53,9 +53,7 @@ return {
     "mfussenegger/nvim-dap",
     optional = true,
     dependencies = {
-      -- "mfussenegger/nvim-dap-python",
       "sudorook/nvim-dap-python",
-      dir = "~/Projects/neovim/nvim-dap-python",
       branch = "tweak",
       keys = {
         {
