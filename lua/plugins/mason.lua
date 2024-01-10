@@ -12,13 +12,13 @@ return {
   {
     "williamboman/mason-lspconfig.nvim",
     opts = {
-      automatic_installation = false,
+      automatic_installation = true,
     },
   },
   {
     "jay-babu/mason-nvim-dap.nvim",
     opts = {
-      automatic_installation = false,
+      automatic_installation = true,
       ensure_installed = {},
     },
   },
