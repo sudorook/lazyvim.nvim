@@ -4,7 +4,7 @@ return {
     event = { "BufReadPre", "BufNewFile" },
     dependencies = { "mason.nvim" },
     opts = function(_, opts)
-      require("lazyvim.util").on_attach(function(client, bufnr)
+      require("lazyvim.util").lsp.on_attach(function(client, bufnr)
         if client.name == "null-ls" then
           if
             not require("null-ls.generators").can_run(

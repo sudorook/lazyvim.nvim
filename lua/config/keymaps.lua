@@ -6,7 +6,7 @@ vim.keymap.set(
   "n",
   "<F3>",
   function()
-    require("lazyvim.plugins.lsp.format").format({ force = true })
+    require("lazyvim.util").format({ force = true })
   end,
   { desc = "Format Document" }
 )
