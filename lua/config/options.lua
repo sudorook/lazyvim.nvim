@@ -10,3 +10,4 @@ vim.opt.mouse = ""
 vim.lsp.buf.format({ timeout_ms = 30000 })
 vim.opt.conceallevel = 0
 vim.opt.confirm = false
+vim.opt.formatexpr = ""
