@@ -44,7 +44,7 @@ require("lazy").setup({
     -- { import = "lazyvim.plugins.extras.lang.python" },
     { import = "plugins.extras.lang.python" }, -- use system python-debugpy
     -- { import = "lazyvim.plugins.extras.lang.python-semshi" },
-    -- { import = "lazyvim.plugins.extras.lang.ruby" },
+    { import = "lazyvim.plugins.extras.lang.ruby" },
     -- { import = "lazyvim.plugins.extras.lang.rust" },
     { import = "plugins.extras.lang.rust" }, -- use system codelldb
     { import = "lazyvim.plugins.extras.lang.tailwind" },

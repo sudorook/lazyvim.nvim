@@ -209,7 +209,7 @@ return {
         -- smarty_ls = { mason = false },
         -- smithy_ls = { mason = false },
         -- solang = { mason = false },
-        -- solargraph = { mason = false },
+        solargraph = { mason = false },
         -- solc = { mason = false },
         -- solidity_ls = { mason = false },
         -- solidity_ls_nomicfoundation = { mason = false },
