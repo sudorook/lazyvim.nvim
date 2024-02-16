@@ -32,7 +32,7 @@ return {
         -- cadence = { mason = false },
         -- cairo_ls = { mason = false },
         -- ccls = { mason = false },
-        -- -- circom-lsp = { mason = false },
+        -- circom-lsp = { mason = false },
         clangd = { mason = false },
         -- clarity_lsp = { mason = false },
         -- clojure_lsp = { mason = false },
