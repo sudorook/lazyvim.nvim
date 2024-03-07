@@ -111,7 +111,7 @@ return {
         -- jqls = { mason = false },
         jsonls = { mason = false },
         -- jsonnet_ls = { mason = false },
-        -- julials = { mason = false },
+        julials = { mason = false },
         -- kotlin_language_server = { mason = false },
         -- lean3ls = { mason = false },
         -- leanls = { mason = false },
