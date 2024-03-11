@@ -28,7 +28,6 @@ return {
         sources = {
           nls.builtins.diagnostics.cppcheck,
           nls.builtins.diagnostics.flake8,
-          nls.builtins.diagnostics.shellcheck,
         },
       }
     end,
