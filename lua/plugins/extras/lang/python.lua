@@ -17,9 +17,23 @@ return {
     opts = {
       servers = {
         pyright = {},
-        ruff_lsp = {},
-        -- pyright = { mason = false },
-        -- ruff_lsp = { mason = false },
+        ruff_lsp = {
+          keys = {
+            {
+              "<leader>co",
+              function()
+                vim.lsp.buf.code_action({
+                  apply = true,
+                  context = {
+                    only = { "source.organizeImports" },
+                    diagnostics = {},
+                  },
+                })
+              end,
+              desc = "Organize Imports",
+            },
+          },
+        },
       },
       setup = {
         ruff_lsp = function()
@@ -54,7 +68,6 @@ return {
     optional = true,
     dependencies = {
       "sudorook/nvim-dap-python",
-      dir = "~/Projects/neovim/nvim-dap-python",
       branch = "tweak",
       keys = {
         {
@@ -75,10 +88,10 @@ return {
         },
       },
       config = function()
+        -- hard-code system python
         require("dap-python").resolve_python = function()
           return "/usr/bin/python"
         end
-        -- require("dap-python").setup("/usr/bin/python")
         require("dap-python").setup("python")
       end,
     },
