@@ -16,10 +16,8 @@ return {
     },
     ---@param opts cmp.ConfigSchema
     opts = function(_, opts)
-      local cmp = require("cmp")
-      opts.sources = cmp.config.sources(vim.list_extend(opts.sources, {
-        { name = "crates" },
-      }))
+      opts.sources = opts.sources or {}
+      table.insert(opts.sources, { name = "crates" })
     end,
   },
 
@@ -27,36 +25,26 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     opts = function(_, opts)
-      if type(opts.ensure_installed) == "table" then
-        vim.list_extend(opts.ensure_installed, { "ron", "rust", "toml" })
-      end
+      opts.ensure_installed = opts.ensure_installed or {}
+      vim.list_extend(opts.ensure_installed, { "ron", "rust", "toml" })
     end,
   },
 
   {
     "mrcjkb/rustaceanvim",
+    version = "^4", -- Recommended
     ft = { "rust" },
     opts = {
       server = {
-        on_attach = function(client, bufnr)
-          -- register which-key mappings
-          local wk = require("which-key")
-          wk.register({
-            ["<leader>cR"] = {
-              function()
-                vim.cmd.RustLsp("codeAction")
-              end,
-              "Code Action",
-            },
-            ["<leader>dr"] = {
-              function()
-                vim.cmd.RustLsp("debuggables")
-              end,
-              "Rust debuggables",
-            },
-          }, { mode = "n", buffer = bufnr })
+        on_attach = function(_, bufnr)
+          vim.keymap.set("n", "<leader>cR", function()
+            vim.cmd.RustLsp("codeAction")
+          end, { desc = "Code Action", buffer = bufnr })
+          vim.keymap.set("n", "<leader>dr", function()
+            vim.cmd.RustLsp("debuggables")
+          end, { desc = "Rust debuggables", buffer = bufnr })
         end,
-        settings = {
+        default_settings = {
           -- rust-analyzer language server configuration
           ["rust-analyzer"] = {
             cargo = {
@@ -113,7 +101,7 @@ return {
         },
       },
       setup = {
-        rust_analyzer = function(_, opts)
+        rust_analyzer = function()
           return true
         end,
       },
@@ -123,13 +111,11 @@ return {
   {
     "nvim-neotest/neotest",
     optional = true,
-    dependencies = {
-      "rouge8/neotest-rust",
-    },
-    opts = {
-      adapters = {
-        ["neotest-rust"] = {},
-      },
-    },
+    opts = function(_, opts)
+      opts.adapters = opts.adapters or {}
+      vim.list_extend(opts.adapters, {
+        require("rustaceanvim.neotest"),
+      })
+    end,
   },
 }
