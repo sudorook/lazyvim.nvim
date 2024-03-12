@@ -128,7 +128,7 @@ return {
         },
         -- luau_lsp = { mason = false },
         -- m68k = { mason = false },
-        -- marksman = { mason = false },
+        marksman = { mason = false },
         -- matlab_ls = { mason = false },
         -- mdx_analyzer = { mason = false },
         -- metals = { mason = false },
