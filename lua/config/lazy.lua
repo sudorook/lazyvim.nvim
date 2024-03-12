@@ -23,6 +23,7 @@ require("lazy").setup({
     -- { import = "lazyvim.plugins.extras.vscode" },
     -- { import = "lazyvim.plugins.extras.coding.codeium" },
     -- { import = "lazyvim.plugins.extras.coding.copilot" },
+    -- { import = "lazyvim.plugins.extras.coding.tabnine" },
     -- { import = "lazyvim.plugins.extras.coding.yanky" },
     { import = "lazyvim.plugins.extras.dap.core" },
     { import = "lazyvim.plugins.extras.dap.nlua" },
@@ -40,6 +41,7 @@ require("lazy").setup({
     -- { import = "lazyvim.plugins.extras.lang.go" },
     -- { import = "lazyvim.plugins.extras.lang.java" },
     { import = "lazyvim.plugins.extras.lang.json" },
+    -- { import = "lazyvim.plugins.extras.lang.markdown" },
     -- { import = "lazyvim.plugins.extras.lang.omnisharp" },
     -- { import = "lazyvim.plugins.extras.lang.python" },
     { import = "plugins.extras.lang.python" }, -- use system python-debugpy
