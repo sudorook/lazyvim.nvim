@@ -29,6 +29,7 @@ return {
           nls.builtins.diagnostics.cppcheck,
           nls.builtins.diagnostics.flake8,
           nls.builtins.diagnostics.luacheck,
+          nls.builtins.formatting.rufo,
         },
       }
     end,
