@@ -4,7 +4,6 @@ return {
   { "echasnovski/mini.pairs", enabled = false },
   { "echasnovski/mini.surround", enabled = false },
   { "folke/noice.nvim", enabled = false },
-  { "goolord/alpha-nvim", enabled = false },
   { "lukas-reineke/headlines.nvim", enabled = false },
   { "nvimdev/dashboard-nvim", enabled = false },
   { "nvim-neo-tree/neo-tree.nvim", enabled = false },
