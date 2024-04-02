@@ -71,7 +71,7 @@ return {
       },
     },
   },
-  
+
   -- {
   --   "simrat39/rust-tools.nvim",
   --   lazy = true,
@@ -195,6 +195,7 @@ return {
       },
     },
   },
+
   {
     "nvim-neotest/neotest",
     optional = true,
