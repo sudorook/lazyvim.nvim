@@ -63,6 +63,7 @@ return {
             require("dap-python").test_method()
           end,
           desc = "Debug Method",
+          ft = "python",
         },
         {
           "<leader>dPc",
@@ -70,6 +71,7 @@ return {
             require("dap-python").test_class()
           end,
           desc = "Debug Class",
+          ft = "python",
         },
       },
       config = function()
