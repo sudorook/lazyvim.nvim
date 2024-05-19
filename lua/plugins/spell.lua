@@ -1,5 +1,0 @@
-return {
-  {
-    "sudorook/wordlist.vim",
-  },
-}
