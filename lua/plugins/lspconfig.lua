@@ -11,7 +11,7 @@ return {
         -- als = { mason = false },
         -- anakin_language_server = { mason = false },
         -- angularls = { mason = false },
-        -- ansiblels = { mason = false },
+        ansiblels = { mason = false },
         -- antlersls = { mason = false },
         -- apex_ls = { mason = false },
         -- arduino_language_server = { mason = false },
