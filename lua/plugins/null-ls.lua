@@ -29,6 +29,7 @@ return {
           nls.builtins.diagnostics.cppcheck,
           nls.builtins.diagnostics.selene,
           nls.builtins.formatting.rufo,
+          nls.builtins.formatting.styler,
         },
       }
     end,
