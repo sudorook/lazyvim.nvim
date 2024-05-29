@@ -1,4 +1,10 @@
 return {
+  recommended = function()
+    return LazyVim.extras.wants({
+      ft = "rust",
+      root = { "Cargo.toml", "rust-project.json" },
+    })
+  end,
 
   -- Extend auto completion
   {
@@ -8,7 +14,7 @@ return {
         "Saecki/crates.nvim",
         event = { "BufRead Cargo.toml" },
         opts = {
-          src = {
+          completion = {
             cmp = { enabled = true },
           },
         },
@@ -42,7 +48,7 @@ return {
           end, { desc = "Code Action", buffer = bufnr })
           vim.keymap.set("n", "<leader>dr", function()
             vim.cmd.RustLsp("debuggables")
-          end, { desc = "Rust debuggables", buffer = bufnr })
+          end, { desc = "Rust Debuggables", buffer = bufnr })
         end,
         default_settings = {
           -- rust-analyzer language server configuration
@@ -50,7 +56,9 @@ return {
             cargo = {
               allFeatures = true,
               loadOutDirsFromCheck = true,
-              runBuildScripts = true,
+              buildScripts = {
+                enable = true,
+              },
             },
             -- Add clippy lints for Rust.
             checkOnSave = {
@@ -71,7 +79,13 @@ return {
       },
     },
     config = function(_, opts)
-      vim.g.rustaceanvim = vim.tbl_deep_extend("force", {}, opts or {})
+      vim.g.rustaceanvim = vim.tbl_deep_extend("keep", vim.g.rustaceanvim or {}, opts or {})
+      if vim.fn.executable("rust-analyzer") == 0 then
+        LazyVim.error(
+          "**rust-analyzer** not found in PATH, please install it.\nhttps://rust-analyzer.github.io/",
+          { title = "rustaceanvim" }
+        )
+      end
     end,
   },
 
@@ -80,16 +94,12 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
-        rust_analyzer = {},
         taplo = {
           keys = {
             {
               "K",
               function()
-                if
-                  vim.fn.expand("%:t") == "Cargo.toml"
-                  and require("crates").popup_available()
-                then
+                if vim.fn.expand("%:t") == "Cargo.toml" and require("crates").popup_available() then
                   require("crates").show_popup()
                 else
                   vim.lsp.buf.hover()
@@ -99,11 +109,6 @@ return {
             },
           },
         },
-      },
-      setup = {
-        rust_analyzer = function()
-          return true
-        end,
       },
     },
   },
