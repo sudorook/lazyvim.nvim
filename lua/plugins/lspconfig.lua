@@ -91,6 +91,7 @@ return {
         -- facility_language_server = { mason = false },
         -- fennel_language_server = { mason = false },
         -- fennel_ls = { mason = false },
+        -- fish_lsp = { mason = false },
         -- flow = { mason = false },
         -- flux_lsp = { mason = false },
         -- foam_ls = { mason = false },
