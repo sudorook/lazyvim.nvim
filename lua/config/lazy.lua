@@ -22,7 +22,7 @@ require("lazy").setup({
     { import = "plugins" },
   },
   change_detection = {
-    enabled = false,
+    enabled = true,
     notify = false,
   },
   defaults = {
