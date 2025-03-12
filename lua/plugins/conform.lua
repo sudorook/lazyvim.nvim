@@ -4,6 +4,9 @@ return {
     opts = {
       format_on_save = nil,
       format_after_save = nil,
+      formatters_by_ft = {
+        ["_"] = { "trim_whitespace" },
+      },
       formatters = {
         black = {
           args = {
