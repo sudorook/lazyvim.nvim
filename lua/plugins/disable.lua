@@ -1,8 +1,8 @@
 return {
   { "catppuccin/nvim", enabled = false },
-  { "echasnovski/mini.comment", enabled = false },
-  { "echasnovski/mini.pairs", enabled = false },
-  { "echasnovski/mini.surround", enabled = false },
+  { "nvim-mini/mini.comment", enabled = false },
+  { "nvim-mini/mini.pairs", enabled = false },
+  { "nvim-mini/mini.surround", enabled = false },
   { "folke/noice.nvim", enabled = false },
   { "lukas-reineke/headlines.nvim", enabled = false },
   { "MeanderingProgrammer/render-markdown.nvim", enabled = false },
